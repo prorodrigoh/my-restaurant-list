@@ -1,3 +1,27 @@
+# Problem
+    When it is time to lunch you can find your favourite restaurant
+    We need a rating system
+# User Flow
+    First thing on the page, list of restaurants
+    A button, it returns a random restaurant (restaurant page)
+    When click in a restaurant it goes to that restaurant (restaurant page)
+    Button for login/signup
+    Once logged you can rate a restaurant, add a new restaurant and after the restautant is created, it goes to that restaurant (restaurant page)
+# Wireframe
+    Restaurant page layout
+        picture of restaurant
+        name of restaurant, rate of restaurant
+
+    Restaurant list layout (desktop)
+        add button, login button
+        picture of restaurant
+        name of restaurant, rate of restaurant
+
+    Restaurant list layout (mobile) (RestaurantList)
+        picture of restaurant                   (RestautantCard
+        name of restaurant, rate of restaurant   Component)
+        add button, login button (MenuBar Component)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
