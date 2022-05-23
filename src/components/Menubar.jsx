@@ -1,26 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../App";
 import { useNavigate } from "react-router-dom";
 import { Menu } from 'antd';
-import { HomeOutlined, PlusCircleOutlined, QuestionCircleOutlined, UserOutlined} from '@ant-design/icons'
+import { HomeOutlined, PlusCircleOutlined, QuestionCircleOutlined} from '@ant-design/icons'
 
+const { Item } = Menu
 
-export default function Menubar({user}) {
+export default function Menubar() {
   let navigate = useNavigate();
+  const { user } = useContext(UserContext)
     return (
         <Menu theme='dark' mode='horizontal' >
 
-          <Menu.Item key='home' onClick={ ()=> navigate('/')}
+          <Item key='home' onClick={ ()=> navigate('/')}
             icon={<HomeOutlined style={{ fontSize: '1.8em' }} />} />
 
-          <Menu.Item key='add' onClick={ ()=> navigate('/add')}
+          <Item key='add' onClick={ ()=> navigate('/add')}
             icon={<PlusCircleOutlined style={{ fontSize: '1.8em' }} />} />
 
-          {user && <Menu.Item key='random' onClick={ (restaurant)=> navigate(`/restaurant/${restaurant.id}`)} 
+          {user && <Item key='random'  
             icon={<QuestionCircleOutlined style={{ fontSize: '1.8em'}} />} /> }
 
-          <Menu.Item key='login' onClick={ ()=> navigate('/login')}
-            icon={<UserOutlined style={{ fontSize: '1.8em'}} />} />
-            
         </Menu>
     )
 }
