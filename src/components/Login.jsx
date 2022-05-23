@@ -28,7 +28,7 @@ export default function Login() {
   const { setUser } = useContext(UserContext)
   
 
-  const handleLogin = ({email, password}) => { 
+  const handleLogin = ( {email, password} ) => { 
     const auth = connectAuth()
     signInWithEmailAndPassword(auth, email, password) // Login with Firebase Authentication API
       .then(res => setUser(res.user))
@@ -71,16 +71,20 @@ export default function Login() {
         >
           <Input.Password />
         </Form.Item>
-      </Form>
 
-      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-        <Button type="primary" htmlType="submit">
-          Login
-        </Button>
-        <Button onClick={handleGoogleLogin}>
-          Google Login
-        </Button>
-      </Form.Item>
+        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+          <Button type="primary" htmlType="submit">
+            Login
+          </Button>
+        </Form.Item>
+        
+        <Form.Item>
+          <Button onClick={handleGoogleLogin}>
+            Google Login
+          </Button>
+        </Form.Item>
+
+      </Form>
     </section>
   )
 }
