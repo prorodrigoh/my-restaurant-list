@@ -6,7 +6,7 @@ export default function RestaurantPage () {
     const  { restaurantId } = useParams()
     const [ restaurant, setRestaurant ] = useState();
     useEffect(() => {
-        fetch(`https://my-first-firestore-bc.web.app/restaurants/${restaurantId}`)
+        fetch(`https://my-first-firestore-rh.web.app/restaurants/${restaurantId}`)
             .then(response => response.json())
             .then(data => setRestaurant(data))
             .catch(console.error)

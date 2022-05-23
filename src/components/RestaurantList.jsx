@@ -6,7 +6,7 @@ export default function RestaurantList(){
     const [restaurants, setRestaurants] = useState()
     useEffect( () => {
     // fetch the api
-    fetch('https://my-first-firestore-bc.web.app/restaurants')
+    fetch('https://my-first-firestore-rh.web.app/restaurants')
         .then(response => response.json())
         .then(data => setRestaurants(data))
         .catch(err => console.error(err))
